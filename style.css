@@ -6,6 +6,7 @@
     font-family: 'Montserrat', sans-serif;
     margin: 10px;
     padding: 2px;
+    font-size: 24px;
 
 }
 #startPage{
@@ -36,6 +37,9 @@
 .top-bar{
     background-color: antiquewhite; 
 }
+#countdown {
+    font-size: 36px;
+}
 h2,h3{
     font-size: 2rem;
     font-weight: 700;
@@ -43,7 +47,7 @@ h2,h3{
     text-align: center;
 }  
 button{
-    background-color: #4CAF50;
+    background-color: #40e0d0;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -56,11 +60,6 @@ button{
     border-radius: 12px;
     margin-bottom: 1rem;
 }
-
-input:hover {
-    color: #749172;
-    background-color: #e8eaed;
-  }
 .quiz-container{
     background-color: antiquewhite;
     display: none;
@@ -80,34 +79,23 @@ input:hover {
     justify-content: center;
     margin: auto;
 } 
-#endPage {
+#endPage h2{
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 16pt;
     margin-bottom: 1rem;
     text-align: center;
 }
 /* 
 ----------High score page
 */ 
-#highScorePage{
+.highScores{
     display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: auto;
 }
-#highScorePage::after {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-@media screen and (min-width: 960px)   {
-    
-}
-@media screen and (min-width: 764px)   {
-    
-}
+
 #msg {
     visibility: hidden;
     margin-top: 20px;
@@ -128,21 +116,10 @@ input:hover {
   #msg.error {
     color: #e6252c;
   }
-
+  @media screen and (min-width: 960px)   {
+    
+  }
+  @media screen and (min-width: 764px)   {
+      
+  }
 /* FROM SORCE CODE TO BE EDITED */
-
-/* .card {
-    background-color:	#FFFFE0;
-    border-radius: 8px;
-    margin: 60px auto;
-    padding: 20px;
-    width: 60vw;
-    display: block;
-  }
-  
-.card::after {
-    content: " ";
-    display: block;
-    clear: both;
-  }
-   */

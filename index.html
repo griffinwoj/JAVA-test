@@ -14,15 +14,14 @@
         <div class="outer-container"></div>
         <!---top-->
         <div class="top-bar">
-            <button>View High Scores</button>
-            <div id="main"><p id="countdown">Timer: 00:00</p></div>
+            <div id="main"><p id="countdown" >Timer: 00:00</p></div>
         </div>
 
         <!----main inner--->
         <!--this doesn't disappear-->
         <div id="startPage">
             <h1><strong>Quiz</strong></h1>
-            <p>Instructions</p>
+            <p>click start to begin</p>
             <button id="startButton">Start Quiz</button>
         </div>
 
@@ -41,47 +40,24 @@
                         </section>
                     </main>
                 </section>
-                <!----end page here-->
-                <!------------------->
-                <!------------------->
-                <!------------------->
-                <div class="#endPage" id="endPage"
+                <div class="#endPage" id="endPage">
                 <h2>All Done!</h2>
-                <p>Your Score: 00</p>
-                <div>
+                <div id="score">Your score is: </div>
                     <label for="">Enter Initials:</label>
                     <input type="text" name="initials" id="initials">
-                    <label for="">Enter Score:</label>
+                    <label type="score" name="score" id="score">Enter Score:</label>
+                    <div id="correct-answers"></div>
+                        <div id="wrong-answers"></div>
+                            <div id="total-score"></div>
                     <input type="text" name="score" id="score">
                     <button id="submit">Submit</button>
                     <div id="msg"></div>
                     <button id="restartButton">Restart</button>
+                    <button id="restartButton">high scores</button>
                     <div class="highscores">
-                    </div>
-                </div>
-                <div class="card">
-                    <form>
-                      <ul>
-                        <li>
-                          <label for="user-initials">initials:</label>
-                          <select id="user-initials">
-                            <option value=""></option>
-                          </select>
-                        </li>
-                        <li>
-                          <label for="grade">Score:</label>
-                          <input type="text">    
-                          
-                        </li>
-                        <li>
-                          <label for="msg"></label>
-                          <textarea id="msg" name="comments"></textarea>
-                          <h3 class="message"></h3> 
-                        </li>
-                      </ul>
-                    </form> 
-                    <!-- <h3 class="message"></h3>    -->
-                </div>
+                    </div>  
+                  </div>
+                  
                 <script src="script.js"></script>
             </body>
         </html>

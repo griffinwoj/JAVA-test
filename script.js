@@ -166,16 +166,11 @@ function endPage() {
     endPageEL.style.display = "block";
     timerEl.textContent = timeLeft;
     clearInterval(timerID);
-    console.log(score);
-    
 }
 
 
-//storing high scores
-//----------------
-//----------------
-//----------------
-//----------------
+//storing high scores NOT FINISHED
+
 
 var initialsInput = document.querySelector("#initials");
 var scoreInput = document.querySelector("#score");
@@ -200,81 +195,26 @@ function renderLastRegistered() {
 }
 
 submitBtn.addEventListener("click", (event) => {
-        event.preventDefault();
-        console.log(submitBtn)
+    event.preventDefault();
+    console.log(submitBtn)
 
-        var initials = document.querySelector("#initials").value;
-        var score = document.querySelector("#score").value;
+    var initials = document.querySelector("#initials").value;
+    var score = document.querySelector("#score").value;
 
-        if (initials === "") {
-            displayMessage("error", "yo dog, you gotta' put in your initials");
-        } else if (score === "") {
-            displayMessage("error", "score cannot be blank");
-        } else {
-            displayMessage("success", "Registered successfully");
+    if (initials === "") {
+        displayMessage("error", "yo dog, you gotta' put in your initials");
+    } else if (score === "") {
+        displayMessage("error", "score cannot be blank");
+    } else {
+        displayMessage("success", "Registered successfully", initials, score);
 
-            localStorage.setItem("lastInitials", initials);
-            localStorage.setItem("lastScore", score);
-
-        }
-    });
-var userInitialsSpan = {
-    initials: user-initials.value,
-    score: user-score.value,
-};
-
-localStorage.setItem("user-Initials", JSON.stringify(lastInitials));
-renderMessage();
-console.log(localStorage)
-
-
-function renderMessage() {
-    var lastInitials = JSON.parse(localStorage.getItem("user-score"));
-    if (lastInitials !== null) {
-        document.querySelector(".message").textContent = lastInitials.initials +
-            " score is  " + lastScore.score
+        localStorage.setItem("lastInitials", initials);
+        localStorage.setItem("lastScore", score);
+        console.log(initials, score)
     }
-}
-
-
-
-
-
-
+});
+//-------------------last try for local storage-------------------//
 //--------------------------------------------------------------//
 //--------------------------------------------------------------//
 //--------------------------------------------------------------//
 //--------------------------------------------------------------//
-//--------------------------------------------------------------//
-//--------------------------------------------------------------//
-//--------------------------------------------------------------//
-//--------------------------------------------------------------//
-//--------------------------------------------------------------//
-//test//
-// var student = document.getElementById("student-names");
-// var grade = document.getElementById("grades");
-// var comment = document.getElementById("msg");
-// var saveButton = document.getElementById("save");
-// var savedName = document.getElementById("saved-name");
-
-// submitBtn.addEventListener("click", function(event) {
-// event.preventDefault();
-
-// var studentGrade = {
-//   student: student.value,
-//   grade: grade.value,
-//   comment: comment.value.trim()
-// };
-
-// localStorage.setItem("studentGrade", JSON.stringify(studentGrade));
-// renderMessage();
-
-// });
-
-// function renderMessage() {
-//   var lastGrade = JSON.parse(localStorage.getItem("studentGrade"));
-//   if (lastGrade !== null) {
-//     document.querySelector(".message").textContent = lastGrade.student + 
-//     " score is  " + lastGrade.grade
-//   }
-// }

@@ -1,44 +1,25 @@
 # 04 Web APIs: Code Quiz
 
-## Your Task
+This project is a quiz application that tests the creators knowledge of coding concepts by using HTML, CSS, and JavaScript.
 
-To help familiarize you with these tests and allow you to use the skills covered in this module, this Challenge invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. 
+# Usage
+To use this project, follow these steps:
 
-This week’s coursework will equip you with all the skills you need to succeed in this assignment.
+1. Click the "Start" button to begin the quiz.
+2. The timer will start counting down from a set amount of time and the first question will be presented to you.
+3. Answer the question by clicking on one of the provided options.
+4. If you answer correctly, the next question will be presented. If you answer incorrectly, time will be subtracted from the timer and the next question will be presented.
+5. Repeat steps 3 and 4 until all questions have been answered or the timer reaches 0.
+6. Once the quiz is over, you will be prompted to enter your initials to save your score.
+7. Your score will be displayed along with a list of high scores.
 
+# Installation
+To install this project, simply clone the repository and open the index.html file in a web browser.
 
-## Acceptance Criteria
+# Credits
+This project was created by Griffin Wojtowicz and with the assistance of 
+Juan Delgado. Futhermore, less than 40% of this project was built with edX source code:
+© 2023 edX Boot Camps LLC.
 
-```
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and my score
-```
-
-
-
-
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
-
----
-
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
-
-## Bibliography
-Helped by Juan Delgado
-
+# License
+This project is licensed under the MIT License - see the LICENSE.md file for details.
