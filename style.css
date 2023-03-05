@@ -1,0 +1,148 @@
+
+*{
+    background-color: antiquewhite;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin: 10px;
+    padding: 2px;
+
+}
+#startPage{
+    background-color: antiquewhite;
+    font-family: 'Montserrat', sans-serif;
+    display:flex; 
+    flex-direction:column; 
+    align-items: center;
+    justify-content:center;
+    margin:auto;
+    border: 1px;
+    border-color: aqua;
+    overflow: hidden;
+
+}
+.outer-container{
+    background-color: antiquewhite;
+    font-family: 'Montserrat', sans-serif;
+    display: none; 
+    flex-direction:column; 
+    align-items: center;
+    justify-content:center;
+    min-height:100vh;
+    margin:auto;
+    border: 1px;
+    overflow: hidden;
+}
+.top-bar{
+    background-color: antiquewhite; 
+}
+h2,h3{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+}  
+button{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    word-wrap: normal;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+input:hover {
+    color: #749172;
+    background-color: #e8eaed;
+  }
+.quiz-container{
+    background-color: antiquewhite;
+    display: none;
+    flex-direction: column;
+    margin: auto;
+}
+.choicesSec{
+    display: flex;
+    flex-direction: column;
+    border: 1px;
+    margin:  auto;
+}
+#endPage{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+} 
+#endPage {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+/* 
+----------High score page
+*/ 
+#highScorePage{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+#highScorePage::after {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+@media screen and (min-width: 960px)   {
+    
+}
+@media screen and (min-width: 764px)   {
+    
+}
+#msg {
+    visibility: hidden;
+    margin-top: 20px;
+    font-weight: 700;
+    height: 1.2em;
+    font-size: 1.2em;
+  }
+  
+  #msg.success,
+  #msg.error {
+    visibility: visible;
+  }
+  
+  #msg.success {
+    color: #001b44;;
+  }
+  
+  #msg.error {
+    color: #e6252c;
+  }
+
+/* FROM SORCE CODE TO BE EDITED */
+
+/* .card {
+    background-color:	#FFFFE0;
+    border-radius: 8px;
+    margin: 60px auto;
+    padding: 20px;
+    width: 60vw;
+    display: block;
+  }
+  
+.card::after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+   */
