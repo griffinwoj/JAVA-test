@@ -74,7 +74,7 @@ function startPage() {
 
 let currentQuiz = 0;
 let score = 0;
-let timeLeft = 20;
+let timeLeft = 60;
 //loadQuiz();
 
 function nextQuestion() {
@@ -82,6 +82,7 @@ function nextQuestion() {
         console.log("Correct")
     } else {
         console.log("Wrong")
+        timeLeft -= 10;
     }
 
     currentQuiz++;
@@ -92,7 +93,6 @@ function nextQuestion() {
     else {
         showQuestion();
     }
-
 }
 
 function showQuestion() {
@@ -146,6 +146,7 @@ startButtonEl.addEventListener("click", function () {
 var mainEl = document.getElementById('main');
 
 
+
 // Timer that counts down from 5
 function countdown() {
 
@@ -163,9 +164,13 @@ function countdown() {
 function endPage() {
     quiz.style.display = "none";
     main.style.display = "none";
+    localStorage.setItem("lastScore", timeLeft);
+    var userScoreSpan = document.querySelector("#user-score");
+    userScoreSpan.textContent = timeLeft;
     endPageEL.style.display = "block";
     timerEl.textContent = timeLeft;
     clearInterval(timerID);
+    renderHighscores();
 }
 
 
@@ -194,12 +199,25 @@ function renderLastRegistered() {
     }
 }
 
+var highscores = JSON.parse(localStorage.getItem("highscores")) || [];
+function renderHighscores() {
+    highscores.sort(function (a, b) { return b.score - a.score });
+    highscores.forEach(function (score) {
+        var liTag = document.createElement("li");
+        console.log(score.initials, "207")
+        liTag.textContent = score.initials + " - " + score.score;
+        var olEl = document.getElementById("highscores");
+        olEl.appendChild(liTag);
+    });
+}
+
+
 submitBtn.addEventListener("click", (event) => {
     event.preventDefault();
     console.log(submitBtn)
 
     var initials = document.querySelector("#initials").value;
-    var score = document.querySelector("#score").value;
+    var score = document.querySelector("#user-score").value;
 
     if (initials === "") {
         displayMessage("error", "yo dog, you gotta' put in your initials");
@@ -210,9 +228,15 @@ submitBtn.addEventListener("click", (event) => {
 
         localStorage.setItem("lastInitials", initials);
         localStorage.setItem("lastScore", score);
+        var newScore = { initials: initials, score: score }
         console.log(initials, score)
+        highscores.push(newScore);
+        localStorage.setItem("highscores", JSON.stringify(highscores));
+        console.log(highscores)
     }
 });
+
+
 //-------------------last try for local storage-------------------//
 //--------------------------------------------------------------//
 //--------------------------------------------------------------//
